@@ -17,10 +17,9 @@ public class SaldoInicial extends javax.swing.JFrame {
     public SaldoInicial() {
         initComponents();
         this.setLocationRelativeTo(null);
-         botAceptar.setEnabled(false);
+        botAceptar.setEnabled(false);
     }
 
- 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -124,37 +123,38 @@ public class SaldoInicial extends javax.swing.JFrame {
 
     private void botAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botAceptarActionPerformed
         // TODO add your handling code here:
-    Sabores.saldo  = Integer.parseInt(jtfSaldoInicial.getText());
+        Sabores.saldo = Integer.parseInt(jtfSaldoInicial.getText());
 
-    
-    // Cerrar la ventana actual (dispose)
-    dispose();
+        // Cerrar la ventana actual (dispose)
+        dispose();
 
-    // Mostrar una nueva instancia de la ventana PrincipalIn
-    new SaboresH().setVisible(true);    
+        // Mostrar una nueva instancia de la ventana PrincipalIn
+        new SaboresH().setVisible(true);
     }//GEN-LAST:event_botAceptarActionPerformed
 
     private void jtfSaldoInicialKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtfSaldoInicialKeyTyped
         // TODO add your handling code here:
         char carater = evt.getKeyChar();
 
-    // Verificar si el carácter no es un dígito (0-9)
-    if ( carater< '0' || carater > '9') {
-        // Emitir un sonido de advertencia y consumir el evento (ignorar la tecla)
-        getToolkit().beep();  getToolkit().beep(); // Esta línea emite un sonido de advertencia. getToolkit() devuelve la caja de herramientas de la ventana actual, y beep() se utiliza para producir un sonido de advertencia estándar del sistema.
+        // Verificar si el carácter no es un dígito (0-9)
+        if (carater < '0' || carater > '9') {
+            // Emitir un sonido de advertencia y consumir el evento (ignorar la tecla)
+            getToolkit().beep();
+            getToolkit().beep(); // Esta línea emite un sonido de advertencia. getToolkit() devuelve la caja de herramientas de la ventana actual, y beep() se utiliza para producir un sonido de advertencia estándar del sistema.
 
 //evt.consume();: Esto consume el evento de tecla (evt). Consumir el evento significa que la tecla presionada no se procesará más, por lo que la tecla no aparecerá en el campo de texto. Básicamente, se está ignorando la tecla si no es un dígito.
-        evt.consume();
-    }
+            evt.consume();
+        }
 
-    // Verificar si el campo de texto está vacío
-    if (jtfSaldoInicial.getText().isEmpty()) {
-        // Deshabilitar el botón "Aceptar" si el campo está vacío
-        botAceptar.setEnabled(false);
-    } else {
-        // Habilitar el botón "Aceptar" si el campo no está vacío
-        botAceptar.setEnabled(true);
-    }
+        // Verificar si el campo de texto está vacío
+        if (jtfSaldoInicial.getText().isEmpty()) {
+            // Deshabilitar el botón "Aceptar" si el campo está vacío
+            botAceptar.setEnabled(false);
+        } else {
+            // Habilitar el botón "Aceptar" si el campo no está vacío
+            botAceptar.setEnabled(true);
+        }
+        String varString = "varString";
     }//GEN-LAST:event_jtfSaldoInicialKeyTyped
 
     /**
