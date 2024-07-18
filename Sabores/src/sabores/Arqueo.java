@@ -53,6 +53,8 @@ public class Arqueo extends javax.swing.JFrame {
       }     
        return validar;
     }
+
+    String varArqueo = "arqueo";
      
     public void validacion2(){
     if(jtfTarjeta.getText().isEmpty()){
